@@ -1,0 +1,27 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  day: MyString
+  time: MyString
+  start_year: MyString
+  end_year: MyString
+  ongoing: false
+  email: MyString
+  official_url: MyString
+  flow: MyText
+  content: MyText
+  recommend_point: MyText
+
+two:
+  name: MyString
+  day: MyString
+  time: MyString
+  start_year: MyString
+  end_year: MyString
+  ongoing: false
+  email: MyString
+  official_url: MyString
+  flow: MyText
+  content: MyText
+  recommend_point: MyText
