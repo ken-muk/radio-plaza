@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_14_172203) do
+ActiveRecord::Schema.define(version: 2020_08_16_100456) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -61,8 +61,6 @@ ActiveRecord::Schema.define(version: 2020_08_14_172203) do
     t.boolean "ongoing", default: true
     t.string "email"
     t.string "official_url"
-    t.text "flow"
-    t.text "content", null: false
     t.text "recommend_point"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
