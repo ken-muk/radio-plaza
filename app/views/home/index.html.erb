@@ -2,4 +2,7 @@
 <p>Find me in app/views/home/index.html.erb</p>
 <% @programs.each do |program| %>
   <%= program.name %>
+  <% program.corners.each do |corner| %>
+    <%= corner.name %>
+  <% end %>
 <% end %>
