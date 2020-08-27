@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_14_172203) do
+ActiveRecord::Schema.define(version: 2020_08_23_190735) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -35,7 +35,7 @@ ActiveRecord::Schema.define(version: 2020_08_14_172203) do
 
   create_table "personalities", force: :cascade do |t|
     t.string "name", null: false
-    t.string "type", null: false
+    t.string "occupation", null: false
     t.string "official_url"
     t.bigint "program_id", null: false
     t.datetime "created_at", precision: 6, null: false
@@ -61,8 +61,6 @@ ActiveRecord::Schema.define(version: 2020_08_14_172203) do
     t.boolean "ongoing", default: true
     t.string "email"
     t.string "official_url"
-    t.text "flow"
-    t.text "content", null: false
     t.text "recommend_point"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -71,16 +69,16 @@ ActiveRecord::Schema.define(version: 2020_08_14_172203) do
   create_table "songs", force: :cascade do |t|
     t.string "title", null: false
     t.string "artist", null: false
-    t.string "type", null: false
-    t.bigint "corner_id", null: false
+    t.string "song_type", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.bigint "corner_id"
     t.index ["corner_id"], name: "index_songs_on_corner_id"
   end
 
   create_table "stations", force: :cascade do |t|
     t.string "name", null: false
-    t.string "type", null: false
+    t.string "broadcast_type", null: false
     t.bigint "program_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
