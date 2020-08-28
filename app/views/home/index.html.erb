@@ -1,5 +1,9 @@
 <% @programs.each do |program| %>
   <h1><%= program.name %></h1><br />
+  <% program.personalities.each do |personality| %>
+    <h3><%= personality.name %></h3><br />
+  <% end %>
+  <h3><%= program.station.name %></h3><br />
   【番組ソング】<br />
   <% program.songs.each do |song| %>
     <%= song.title %>／<%= song.artist %>／<%= song.song_type %><br />
