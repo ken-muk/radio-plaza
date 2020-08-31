@@ -1,0 +1,16 @@
+@import "../mixins/common-mixins";
+
+.programs {
+  &__wrapper {
+    @include wrapper;
+  }
+
+  &__container {
+    @include container;
+
+    select {
+      @include select-box;
+      margin-top: 15px;
+    }
+  }
+}
