@@ -1,0 +1,57 @@
+<div class="programs__wrapper">
+  <div class="programs__container">
+    <% @programs.each do |program| %>
+      <div class="program__wrapper">
+        <div class="program__container">
+          <section class="program__main-information">
+            <h1><span>◆<%= program.name %></span></h1>
+            <% program.personalities.each do |personality| %>
+              <h3>パーソナリティー：<%= personality.name %></h3>
+            <% end %>
+            <h3>キーステーション：<%= program.station.name %></h3>
+          </section>
+          <section class="program__corner-information">
+            <h4>＜コーナー＞</h4>
+            <% program.corners.each do |corner| %>
+              <p>
+                ・<span><%= corner.name %></span><br />
+                <% corner.songs.each do |song| %>
+                  →<%= song.title %>（<%= song.artist %>）
+                <% end %>
+              </p>
+            <% end %>
+          </section>
+          <section class="program__song-information">
+            <% if opening = opening(program) %>
+              <h4>＜オープニング曲＞</h4>
+              <% opening(program).each do |opening| %>
+                <p>→<%= opening.title %>（<%= opening.artist %>）<p>
+              <% end %>
+            <% end %>
+
+            <% if ending = ending(program) %>
+              <h4>＜エンディング曲＞</h4>
+              <% ending(program).each do |ending| %>
+                <p>→<%= ending.title %>（<%= ending.artist %>）</p>
+              <% end %>
+            <% end %>
+
+            <% if jingles = jingles(program) %>
+              <h4>＜ジングル＞</h4>
+              <% jingles(program).each do |jingle| %>
+                <p>・<%= jingle.title %>（<%= jingle.artist %>）</p>
+              <% end %>
+            <% end %>
+
+            <% if fillers = fillers(program) %>
+              <h4>＜フィラー＞</h4>
+              <% fillers.each do |filler| %>
+                <p>・<%= filler.title %>（<%= filler.artist %>）</p>
+              <% end %>
+            <% end %>
+          </section>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
