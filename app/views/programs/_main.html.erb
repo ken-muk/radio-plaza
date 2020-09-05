@@ -1,0 +1,33 @@
+<section class="program__main-information">
+  <h3>【基本情報】</h3>
+  <p>
+    <span>＜放送時間＞</span><br />
+    <%= program.day %> <%= program.time %>
+  </p>
+  <p>
+    <span>＜放送期間＞</span><br />
+    <%= program.start_year %>〜<%= program.end_year %>
+  </p>
+  <p>
+    <span>＜パーソナリティー＞</span><br />
+    <% program.personalities.each do |personality| %>
+      <%= link_to personality.name, personality.official_url, target: :_blank %>（<%= personality.occupation %>）
+    <% end %>
+  </p>
+  <p>
+    <span>＜キーステーション＞</span><br />
+    <%= program.station.name %>（<%= program.station.broadcast_type %>）
+  </p>
+  <p>
+    <span>＜公式サイト＞</span><br />
+    <%= link_to program.official_url %>
+  </p>
+  <p>
+    <span>＜メールアドレス＞</span><br />
+    <%= program.email %>
+  </p>
+  <p>
+    <span>＜おすすめポイント＞</span><br />
+    <%= program.recommend_point %>
+  </p>
+</section>
