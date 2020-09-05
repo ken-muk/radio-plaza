@@ -1,0 +1,9 @@
+<section class="program__corner-information">
+  <h3>【コーナー紹介】</h3>
+  <% program.corners.each do |corner| %>
+    <p>
+      <span>＜<%= corner.name %>＞</span><br />
+      <%= corner.content %><br />
+    </p>
+  <% end %>
+</section>
