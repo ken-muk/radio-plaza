@@ -2,11 +2,11 @@
   <h3>【基本情報】</h3>
   <p>
     <span>＜放送時間＞</span><br />
-    <%= program.day %> <%= program.time %>
+    <%= convert_day(program) %> <%= program.time %>
   </p>
   <p>
     <span>＜放送期間＞</span><br />
-    <%= program.start_year %>〜<%= program.end_year %>
+    <%= program.start_year %>〜<%= convert_end_year(program) %>
   </p>
   <p>
     <span>＜パーソナリティー＞</span><br />
