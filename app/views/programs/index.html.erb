@@ -1,5 +1,8 @@
 <div class="programs__wrapper">
   <div class="programs__container">
+    <% @stations.each do |station| %>
+      <%= link_to station.name, sort_path(station.name) %>
+    <% end %>
     <% @programs.each do |program| %>
       <div class="program__wrapper">
         <div class="program__container">
