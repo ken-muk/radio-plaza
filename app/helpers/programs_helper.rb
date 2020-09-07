@@ -1,6 +1,5 @@
 module ProgramsHelper
-  def convert_day(program)
-    day = program.day
+  def convert_day(day)
     case day
     when 0 then
       "日曜日"
@@ -35,6 +34,10 @@ module ProgramsHelper
 
   def jingles(program)
     return program.songs.where(song_type: :ジングル) if program.songs.where(song_type: :ジングル).exists?
+  end
+
+  def talk_bgms(program)
+    return program.songs.where(song_type: :トークBGM) if program.songs.where(song_type: :トークBGM).exists?
   end
 
   def fillers(program)

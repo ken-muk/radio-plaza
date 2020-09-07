@@ -3,6 +3,12 @@
     <% @stations.each do |station| %>
       <%= link_to station.name, sort_path(station.name) %>
     <% end %>
+    <% @personalities.each do |personality| %>
+      <%= link_to personality.occupation, sort_path(personality.occupation) %>
+    <% end %>
+    <% @program_days.each do |program_day| %>
+      <%= link_to convert_day(program_day.day), sort_path(program_day.day) %>
+    <% end %>
     <% @programs.each do |program| %>
       <div class="program__wrapper">
         <div class="program__container">

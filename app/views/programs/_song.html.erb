@@ -31,6 +31,13 @@
     <% end %>
   <% end %>
 
+  <% if talk_bgms = talk_bgms(program) %>
+    <h4>＜トークBGM＞</h4>
+    <% talk_bgms(program).each do |talk_bgm| %>
+      <p>・<%= talk_bgm.title %>（<%= talk_bgm.artist %>）</p>
+    <% end %>
+  <% end %>
+
   <% if fillers = fillers(program) %>
     <h4>＜フィラー＞</h4>
     <% fillers.each do |filler| %>
