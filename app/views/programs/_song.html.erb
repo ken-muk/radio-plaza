@@ -14,14 +14,16 @@
     <% end %>
   <% end %>
 
-  <h4>＜コーナー＞</h4>
-  <% program.corners.each do |corner| %>
-    <p>
-      ・<%= corner.name %><br />
-      <% corner.songs.each do |song| %>
-        →<%= song.title %>（<%= song.artist %>）
-      <% end %>
-    </p>
+  <% if program.corners.present? %>
+    <h4>＜コーナー＞</h4>
+    <% program.corners.each do |corner| %>
+      <p>
+        ・<%= corner.name %><br />
+        <% corner.songs.each do |song| %>
+          →<%= song.title %>（<%= song.artist %>）
+        <% end %>
+      </p>
+    <% end %>
   <% end %>
 
   <% if jingles = jingles(program) %>

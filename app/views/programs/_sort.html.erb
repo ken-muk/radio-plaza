@@ -16,7 +16,7 @@
     <ul>
       <p>曜日</p>
       <% program_days.each do |program_day| %>
-        <li><%= link_to convert_day(program_day.day), sort_path(program_day.day) %></li>
+        <li><%= link_to sort_day(program_day.day), sort_path(program_day.day) %></li>
       <% end %>
     </ul>
   </div>

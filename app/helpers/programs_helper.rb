@@ -1,6 +1,30 @@
 module ProgramsHelper
-  def convert_day(day)
+  def sort_day(day)
     case day
+    when 0 then
+      "月曜日"
+    when 1 then
+      "火曜日"
+    when 2 then
+      "水曜日"
+    when 3 then
+      "木曜日"
+    when 4 then
+      "金曜日"
+    when 5 then
+      "土曜日"
+    when 6 then
+      "日曜日"
+    else
+      "不定期"
+    end
+  end
+
+  def convert_day(program)
+    if program.start_time.hour <= 5
+      program.day -= 1
+    end
+    case program.day
     when 0 then
       "月曜日"
     when 1 then
