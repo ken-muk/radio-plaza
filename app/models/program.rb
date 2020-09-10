@@ -9,5 +9,7 @@ class Program < ApplicationRecord
   validates :day, presence: true
   validates :start_year, presence: true
   validates :end_year, presence: true
+  validates :start_time, presence: true
+  validates :end_time, presence: true
   validates :ongoing, presence: true
 end
