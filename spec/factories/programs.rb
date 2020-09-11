@@ -1,7 +1,7 @@
 FactoryBot.define do
   factory :program do
     sequence(:name) { |n| "PROGRAM#{n}" }
-    day { 0 }
+    sequence(:day) { 0 }
     start_year { 2000 }
     end_year { 2005 }
     start_time { '20:00:00' }
@@ -12,7 +12,10 @@ FactoryBot.define do
     recommend_point { "TEST" }
 
     after(:create) do |program|
-      create(:program_song, program: program, songs: create(:song))
+      create_list(:program_song, 4, program: program, song: create(:song))
+      create_list(:corner, 3, program: program)
+      create(:station, program: program)
+      create(:personality, program: program)
     end
   end
 end

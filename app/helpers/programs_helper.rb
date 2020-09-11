@@ -55,9 +55,7 @@ module ProgramsHelper
   end
 
   def convert_end_year(program)
-    if program.end_year == 0
-      "現在"
-    end
+    program.end_year == 0 ? "現在" : program.end_year
   end
 
   def opening(program)
