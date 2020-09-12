@@ -1,5 +1,6 @@
 <div class="programs__wrapper">
   <div class="programs__container">
+    <%= render 'sort', stations: @stations, personalities: @personalities, program_days: @program_days %>
     <% @programs.each do |program| %>
       <div class="program__wrapper">
         <div class="program__container">

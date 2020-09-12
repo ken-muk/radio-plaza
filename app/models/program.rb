@@ -7,8 +7,9 @@ class Program < ApplicationRecord
 
   validates :name, presence: true
   validates :day, presence: true
-  validates :time, presence: true
   validates :start_year, presence: true
   validates :end_year, presence: true
+  validates :start_time, presence: true
+  validates :end_time, presence: true
   validates :ongoing, presence: true
 end

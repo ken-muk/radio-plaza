@@ -20,11 +20,6 @@ RSpec.describe Program, type: :model do
       expect(@program.valid?).to eq(false)
     end
 
-    it 'timeが空だとNG' do
-      @program.time = ''
-      expect(@program.valid?).to eq(false)
-    end
-
     it 'start_yearが空だとNG' do
       @program.start_year = ''
       expect(@program.valid?).to eq(false)
@@ -32,6 +27,16 @@ RSpec.describe Program, type: :model do
 
     it 'end_yearが空だとNG' do
       @program.end_year = ''
+      expect(@program.valid?).to eq(false)
+    end
+
+    it 'start_timeが空だとNG' do
+      @program.start_time = ''
+      expect(@program.valid?).to eq(false)
+    end
+
+    it 'end_timeが空だとNG' do
+      @program.end_time = ''
       expect(@program.valid?).to eq(false)
     end
 

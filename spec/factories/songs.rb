@@ -3,7 +3,5 @@ FactoryBot.define do
     sequence(:title) { |n| "SONG#{n}" }
     sequence(:artist) { |n| "ARTIST#{n}" }
     song_type { "オープニング" }
-
-    association :corner
   end
 end

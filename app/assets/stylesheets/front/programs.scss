@@ -13,4 +13,38 @@
       margin-top: 15px;
     }
   }
+
+  &__sort {
+    background: #fff8e8;
+    margin-bottom: 60px;
+    padding-bottom: 45px;
+
+    p {
+      font-size: 22px;
+      font-weight: bold;
+    }
+  }
+
+  &__sort-title {
+    font-size: 1.2em;
+    background: #ffc06e;
+    padding: 4px;
+    text-align: center;
+    color: #FFF;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+  }
+
+  &__sort-items {
+    display: flex;
+    justify-content: center;
+
+    ul {
+      list-style: none;
+      text-align: center;
+      width: 30%;
+      margin: 0;
+      padding: 0;
+    }
+  }
 }
