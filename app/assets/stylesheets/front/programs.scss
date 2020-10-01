@@ -15,13 +15,15 @@
   }
 
   &__sort {
-    background: #fff8e8;
+    background: #fff8ee;
     margin-bottom: 60px;
     padding-bottom: 45px;
+    border-radius: 25px;
 
     p {
       font-size: 22px;
       font-weight: bold;
+      border-radius: 25px 25px 0 0;
     }
   }
 
