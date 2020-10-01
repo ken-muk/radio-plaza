@@ -1,0 +1,18 @@
+@import "../mixins/common-mixins";
+
+header{
+  width: 100%;
+  background: $black;
+  margin: -8px;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  z-index: 999;
+
+  a {
+    width: auto;
+    height: 20px;
+    color: $white;
+    text-decoration: none;
+  }
+}
